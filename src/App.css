@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-bg-light);
+  color: var(--color-almost-black);
+}
+
+@layer base {
+  h1 {
+    @apply text-[2rem] md:text-[2.5rem] text-dark-green my-4 text-center;
+  }
+}
+
+@theme {
+  --color-light-beige: oklch(0.7967 0.075 87.08);
+  --color-bg-light: oklch(0.94 0.01 100);
+  --color-almost-black: oklch(0.17 0.02 93);
+  --color-dark-green: oklch(0.36 0.05 138);
+}
