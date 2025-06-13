@@ -1,6 +1,6 @@
 export default function Item({prod}){
   return(
-    <div key={prod.id} className="border flex flex-col gap-3 rounded">
+    <div className="border flex flex-col gap-3 rounded">
           <img src={prod.thumbnail} alt={prod.nombre} className="rounded"/>
           <p>{prod.title}</p>
           <p>$ {prod.price}</p>
