@@ -4,17 +4,19 @@ import ItemList from './ItemList'
 
 export default function ItemListContainer(){
   const [items, setItems] = useState([])
-  const {id} = useParams()
+  const {categoryName} = useParams()
 
   useEffect (() => {
-    fetch('https://dummyjson.com/products')
-      .then(res => res.json())
-      .then(data => setItems(data.products));
-
-    fetch(`https://dummyjson.com/products/category/${id}`)
-      .then(res => res.json())
-      .then(console.log);
-},[id])
+    if (categoryName){
+      fetch(`https://dummyjson.com/products/category/${categoryName}`)
+        .then(res => res.json())
+        .then(res => setItems(res.products));
+    } else {
+      fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then(res => setItems(res.products));
+    }
+},[categoryName])
 
   return (
     <ItemList items={items} />
