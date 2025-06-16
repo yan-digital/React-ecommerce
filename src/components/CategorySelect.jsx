@@ -13,12 +13,16 @@ export default function CategorySelect(){
   },[])
   
   return(
-            <NavDropdown title="Categorias" id="basic-nav-dropdown">
+            <NavDropdown 
+              title="Categorias" 
+              id="basic-nav-dropdown"
+              >
               {categories.map(cat=>(
                 <NavDropdown.Item 
                   key={cat} 
                   to={`/category/${cat}`}
                   as={NavLink}
+                  
                   >
                     {cat}</NavDropdown.Item>
               ))}

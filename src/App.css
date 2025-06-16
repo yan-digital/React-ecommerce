@@ -17,8 +17,11 @@ body {
 }
 
 @theme {
-  --color-light-beige: oklch(0.7967 0.075 87.08);
   --color-bg-light: oklch(0.94 0.01 100);
-  --color-almost-black: oklch(0.17 0.02 93);
+  --color-light-beige: oklch(0.7967 0.075 87.08);
+  --color-light-pink: oklch(0.8746 0.0616 84.11);
+  --color-peach: oklch(0.7492 0.1326 56.45);
+  --color-mauve: oklch(0.6011 0.1129 43.46);
   --color-dark-green: oklch(0.36 0.05 138);
+  --color-almost-black: oklch(0.17 0.02 93);
 }
