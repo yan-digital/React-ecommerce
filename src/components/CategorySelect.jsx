@@ -1,31 +1,29 @@
-import { useState, useEffect } from 'react'
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink } from 'react-router';
 
 
 export default function CategorySelect(){
-  const [categories, setCategories]= useState([])
 
-  useEffect(()=>{
-    fetch('https://dummyjson.com/products/category-list')
-      .then(res => res.json())
-      .then(cat => setCategories(cat));
-  },[])
-  
   return(
             <NavDropdown 
               title="Categorias" 
               id="basic-nav-dropdown"
-              >
-              {categories.map(cat=>(
-                <NavDropdown.Item 
-                  key={cat} 
-                  to={`/category/${cat}`}
+              >              
+                <NavDropdown.Item  
+                  to='category/hogar'
                   as={NavLink}
-                  
-                  >
-                    {cat}</NavDropdown.Item>
-              ))}
+                  >Hogar
+                  </NavDropdown.Item>
+                  <NavDropdown.Item  
+                  to='category/indumentaria'
+                  as={NavLink}
+                  >Indumentaria
+                  </NavDropdown.Item>
+                  <NavDropdown.Item  
+                  to='category/accesorios'
+                  as={NavLink}
+                  >Accesorios
+                  </NavDropdown.Item>
             </NavDropdown>
   )
 }

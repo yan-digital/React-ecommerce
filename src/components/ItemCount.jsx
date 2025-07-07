@@ -1,8 +1,11 @@
 import { Plus, Minus } from 'lucide-react';
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from '../context/CartContext';
 
-export default function ItemCount() {
-  const [cantidad, setCantidad] = useState(0);
+export default function ItemCount({ item }) {
+  const [cantidad, setCantidad] = useState(1);
+  const { addToCart, isInCart } = useContext(CartContext)
+
 
   const sumar = () => setCantidad(prev => prev + 1);
   const restar = () => setCantidad(prev => (prev > 0 ? prev - 1 : 0));
@@ -29,6 +32,7 @@ export default function ItemCount() {
 
       <button
         className="mt-4 bg-mauve hover:bg-peach text-amber-100 hover:text-almost-black px-4 py-2 !rounded-md transition"
+        onClick={() => addToCart({... item, cantidad})}
       >
         Agregar al carrito
       </button>
