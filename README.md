@@ -102,16 +102,10 @@ http://localhost:5173
 
 ---
 
-## 🎨 Capturas (Opcional)
-
-*Podés agregar capturas de pantalla del proyecto funcionando acá.*
-
----
-
 ## 👩‍💻 Autora
 
 **Yanina Prego**
 
-[LinkedIn](https://www.linkedin.com/in/yanina-prego-1b9329144/) | ✉️ [Email](mailto:yaninaprego@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/yanina-prego-1b9329144/) | [Email](mailto:yaninaprego@gmail.com)
 
 ---
