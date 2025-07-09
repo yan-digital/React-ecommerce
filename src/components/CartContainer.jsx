@@ -5,10 +5,8 @@ import { Link } from 'react-router';
 
 
 export default function Checkout(){
-  const { cart, removeFromCart, getTotal, emptyOutCart } = useContext(CartContext)
-  
+  const { cart, removeFromCart, getTotal, emptyOutCart } = useContext(CartContext)  
   const total = getTotal()
-
 
   if (cart.length === 0){
     return <EmptyCart />

@@ -1,7 +1,7 @@
-import { ShoppingCart } from 'lucide-react';
-import { useContext } from 'react';
-import { CartContext } from '../context/CartContext';
-import { Link } from 'react-router';
+import { ShoppingCart } from 'lucide-react'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
+import { Link } from 'react-router'
 
 export default function CartWidget() {
   const { getQuantity } = useContext(CartContext)

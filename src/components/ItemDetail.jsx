@@ -18,7 +18,6 @@ export default function ItemDetail({ detail }){
           <ItemCount item={ detail }/>
         </div>
       </div>
-
     </section>
-  );
-};
+  )
+}

@@ -2,9 +2,12 @@ import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import { createOrden } from '../firebase/db'
 import { serverTimestamp } from 'firebase/firestore'
+import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router'
 
 export default function Checkout() {
-  const { cart } = useContext(CartContext)
+  const { cart, emptyOutCart } = useContext(CartContext)
+  const navigate = useNavigate()
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -21,9 +24,28 @@ export default function Checkout() {
       apellido,
       telefono,
       products:cart,
-      time: serverTimestamp()
+      time: serverTimestamp(),
+  }).then(() => {
+    Swal.fire({
+      title: '¡Gracias por tu compra!',
+      text: 'Tu pedido está en camino 🚚✨',
+      icon: 'success',
+      confirmButtonText: 'Volver al inicio',
+      confirmButtonColor: '#a78bfa',
+      background: '#fffaf5',
+      color: '#333',
+    }).then(() => {
+      emptyOutCart()
+      navigate('/')
     })
-  }
+  }).catch(() => {
+    Swal.fire({
+      icon: 'error',
+      title: 'Uy...',
+      text: 'Hubo un error al procesar tu compra 😞',
+    })
+  })
+}
 
   return (
   <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-6 bg-white rounded-xl shadow-md">
