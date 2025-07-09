@@ -4,7 +4,7 @@ import { getProducts, getProductsByCategory } from '../firebase/db'
 import ItemList from './ItemList'
 import { useContext } from 'react'
 import { LoaderContext } from '../context/LoaderContext'
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2'
 
 export default function ItemListContainer(){
   const [items, setItems] = useState([])
@@ -14,7 +14,7 @@ export default function ItemListContainer(){
   useEffect(() => {
     showLoader()
 
-    const fetchData = categoryName ? getProductsByCategory(categoryName) : getProducts();
+    const fetchData = categoryName ? getProductsByCategory(categoryName) : getProducts()
 
     fetchData
       .then((products) => {
@@ -22,12 +22,12 @@ export default function ItemListContainer(){
       })
       .catch(() => {
         Swal.fire({
-        icon: 'error',
-        title: 'Uy...',
-        text: 'No pudimos cargar los productos 😢',
-        confirmButtonColor: '#d33',
-        confirmButtonText: 'Reintentar',
-  });
+        icon: "error",
+        title: "Uy...",
+        text: "No pudimos cargar los productos 😢",
+        confirmButtonColor: "#d33",
+        confirmButtonText: "Reintentar",
+  })
       })
       .finally(() => {
         hideLoader()

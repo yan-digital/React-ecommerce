@@ -1,7 +1,7 @@
 import { Plus, Minus } from 'lucide-react'
-import { useState, useContext } from "react"
+import { useState, useContext } from 'react'
 import { CartContext } from '../context/CartContext'
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2'
 
 export default function ItemCount({ item }) {
   const [cantidad, setCantidad] = useState(1)
@@ -22,8 +22,8 @@ export default function ItemCount({ item }) {
       timer: 1800,
       background: "#fff7f0",
       color: "#2f2f2f",
-    });
-  };
+    })
+  }
   return (
     <div className="flex flex-col items-center gap-4 p-4 border-none w-64 bg-white shadow-md">
       <h2 className="text-lg font-semibold text-gray-800">Cantidad: {cantidad}</h2>
@@ -51,5 +51,5 @@ export default function ItemCount({ item }) {
         Agregar al carrito
       </button>
     </div>
-  );
+  )
 }

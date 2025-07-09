@@ -18,5 +18,5 @@ export default function Item({prod}){
             ver más
           </button>
     </div>
-  );
-};
+  )
+}

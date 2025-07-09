@@ -10,17 +10,17 @@ export default function CategorySelect(){
               id="basic-nav-dropdown"
               >              
                 <NavDropdown.Item  
-                  to='category/hogar'
+                  to="category/hogar"
                   as={NavLink}
                   >Hogar
                   </NavDropdown.Item>
                   <NavDropdown.Item  
-                  to='category/indumentaria'
+                  to="category/indumentaria"
                   as={NavLink}
                   >Indumentaria
                   </NavDropdown.Item>
                   <NavDropdown.Item  
-                  to='category/accesorios'
+                  to="category/accesorios"
                   as={NavLink}
                   >Accesorios
                   </NavDropdown.Item>

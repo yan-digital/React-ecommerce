@@ -24,5 +24,5 @@ export default function NavBar(){
       <CartWidget />
       </Container>
     </Navbar>
-  );
-};
+  )
+}

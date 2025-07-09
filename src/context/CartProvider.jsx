@@ -20,7 +20,7 @@ export default function CartProvider ({ children}) {
   const removeFromCart = (id) => {
     const updatedCart = (cart.filter(item => item.id != id))
     setCart(updatedCart)
-  };
+  }
 
   
   const getQuantity = () => {
@@ -37,7 +37,7 @@ export default function CartProvider ({ children}) {
     return total
   }
   
-  const emptyOutCart = () => setCart ([]);
+  const emptyOutCart = () => setCart ([])
 
 
   return(

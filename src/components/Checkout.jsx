@@ -27,22 +27,22 @@ export default function Checkout() {
       time: serverTimestamp(),
   }).then(() => {
     Swal.fire({
-      title: '¡Gracias por tu compra!',
-      text: 'Tu pedido está en camino 🚚✨',
-      icon: 'success',
-      confirmButtonText: 'Volver al inicio',
-      confirmButtonColor: '#a78bfa',
-      background: '#fffaf5',
-      color: '#333',
+      title: "¡Gracias por tu compra!",
+      text: "Tu pedido está en camino 🚚✨",
+      icon: "success",
+      confirmButtonText: "Volver al inicio",
+      confirmButtonColor: "#a78bfa",
+      background: "#fffaf5",
+      color: "#333",
     }).then(() => {
       emptyOutCart()
-      navigate('/')
+      navigate("/")
     })
   }).catch(() => {
     Swal.fire({
-      icon: 'error',
-      title: 'Uy...',
-      text: 'Hubo un error al procesar tu compra 😞',
+      icon: "error",
+      title: "Uy...",
+      text: "Hubo un error al procesar tu compra 😞",
     })
   })
 }
@@ -82,5 +82,5 @@ export default function Checkout() {
   </button>
 </form>
 
-  );
+  )
 }
